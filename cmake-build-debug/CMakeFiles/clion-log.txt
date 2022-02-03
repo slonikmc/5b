@@ -1,0 +1,8 @@
+"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\Akelk\CLionProjects\5b
+CMake Error at libs/CMakeLists.txt:1 (add_subdirectory):
+  add_subdirectory given source "data_structures" which is not an existing
+  directory.
+
+
+-- Configuring incomplete, errors occurred!
+See also "C:/Users/Akelk/CLionProjects/5b/cmake-build-debug/CMakeFiles/CMakeOutput.log".
