@@ -15,6 +15,7 @@ int main() {
     printf("%d %d \n", v.size, v.capacity);
     deleteVector(&v);
 
+
     return 0;
 }
 
