@@ -3,7 +3,7 @@
 #include <assert.h>
 
 void test_pushBack_emptyVector() {
-vector v = createVector(5);
+    vector v = createVector(5);
     pushBack(&v, 42);
     assert(v.data[0] == 42);
     assert(v.size == 1);
@@ -55,8 +55,6 @@ int main() {
 //    printf("%d\n", isFull(&v));
 //
 //    deleteVector(&v);
-
-    printf(":)");
 
     return 0;
 }
