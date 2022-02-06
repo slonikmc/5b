@@ -17,4 +17,6 @@ malloc.h
 C:/Users/Akelk/CLionProjects/5b/libs/data_structures/vector/vector.h
 stdlib.h
 -
+stdbool.h
+-
 
