@@ -52,12 +52,12 @@ void pushBack(vector *v, int x);
 void popBack(vector *v);
 
 // возвращает указатель на index-ый элемент вектора.
-int* atVector(vector *v, size_t index);
+int *atVector(vector *v, size_t index);
 
 // возвращает указатель на последний элемент вектора.
-int* back(vector *v);
+int *back(vector *v);
 
 // возвращает указатель на последний элемент вектора.
-int* front(vector *v);
+int *front(vector *v);
 
 #endif //INC_5B_VECTOR_H

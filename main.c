@@ -36,7 +36,7 @@ void test_atVector_notEmptyVector() {
 void test_atVector_requestToLastElement() {
     vector v = createVector(5);
     v.size = 5;
-    assert(atVector(&v, 5) == &v.data[5]);
+    assert(atVector(&v, 4) == &v.data[4]);
 }
 
 void test_back_oneElementInVector() {
