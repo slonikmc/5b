@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "libs/data_structures/vector/vector.h"
 #include <assert.h>
 
@@ -8,7 +7,6 @@ void test_pushBack_emptyVector() {
     assert(v.data[0] == 42);
     assert(v.size == 1);
     assert(v.capacity == 5);
-    deleteVector(&v);
 }
 
 void test_pushBack_fullVector() {
@@ -18,7 +16,6 @@ void test_pushBack_fullVector() {
     assert(v.data[5] == 42);
     assert(v.size == 6);
     assert(v.capacity == 10);
-    deleteVector(&v);
 }
 
 void test_popBack_notEmptyVector() {
@@ -28,33 +25,44 @@ void test_popBack_notEmptyVector() {
     popBack(&v);
     assert(v.size == 0);
     assert(v.capacity == 1);
-    deleteVector(&v);
+}
+
+void test_atVector_notEmptyVector() {
+    vector v = createVector(5);
+    v.size = 4;
+    assert(atVector(&v, 2) == &v.data[2]);
+}
+
+void test_atVector_requestToLastElement() {
+    vector v = createVector(5);
+    v.size = 5;
+    assert(atVector(&v, 5) == &v.data[5]);
+}
+
+void test_back_oneElementInVector() {
+    vector v = createVector(1);
+    v.size = 1;
+    assert(back(&v) == &v.data[0]);
+}
+
+void test_front_oneElementInVector() {
+    vector v = createVector(1);
+    v.size = 1;
+    assert(front(&v) == &v.data[0]);
 }
 
 void test() {
     test_pushBack_emptyVector();
     test_pushBack_fullVector();
     test_popBack_notEmptyVector();
+    test_atVector_notEmptyVector();
+    test_atVector_requestToLastElement();
+    test_back_oneElementInVector();
+    test_front_oneElementInVector();
 }
 
 int main() {
-
     test();
-//    vector v = createVector(9);
-//    v.size = 3;
-//    printf("%d %d \n", v.size, v.capacity);
-//    reserve(&v, 2);
-//    printf("%d %d %d\n", v.size, v.capacity, v.data);
-//    clear(&v);
-//    printf("%d %d \n", v.size, v.capacity);
-//    v.size = 2;
-//    v.capacity = 4;
-//    shrinkToFit(&v);
-//    printf("%d %d \n", v.size, v.capacity);
-//    printf("%d\n", isEmpty(&v));
-//    printf("%d\n", isFull(&v));
-//
-//    deleteVector(&v);
 
     return 0;
 }
